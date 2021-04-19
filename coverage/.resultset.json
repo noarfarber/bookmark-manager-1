@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/finnwilliamson/Projects/pairing-challenges/bookmark-manager/app.rb": {
+      "/Users/tiffanyvallo/Makers/Projects/bookmark-manager/app.rb": {
         "lines": [
           1,
           1,
@@ -19,7 +19,7 @@
           null
         ]
       },
-      "/Users/finnwilliamson/Projects/pairing-challenges/bookmark-manager/spec/features/hello_world_spec.rb": {
+      "/Users/tiffanyvallo/Makers/Projects/bookmark-manager/spec/features/viewing_bookmarks_spec.rb": {
         "lines": [
           1,
           1,
@@ -30,6 +30,6 @@
         ]
       }
     },
-    "timestamp": 1618846063
+    "timestamp": 1618846378
   }
 }
