@@ -1,4 +1,39 @@
+## How to use
 
+### Set Up Project
+
+Clone this repository and run:
+
+```
+bundle
+```
+
+### Set Up Database
+
+* Connect to `psql` and create `bookmark_manager` database:
+
+```
+CREATE DATABASE bookmark_manager;
+```
+
+* Set up the appropriate tables by connecting to the database in `psql` using the command `\c bookmark_manager;`
+* Run the SQL scripts in the `db/migrations` folder in the given order.
+
+### Run The App
+
+```
+rackup
+```
+
+### Run Tests:
+
+```
+rspec
+```
+### Run Linting:
+```
+rubocop
+```
 
 ## User Stories
 

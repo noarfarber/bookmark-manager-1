@@ -5,11 +5,11 @@ feature 'testing root route, Bookmark Manager view' do
   end
 end
 
-feature 'testing bookmarks route' do
+feature 'Viewing bookmarks' do
   scenario 'shows a list of bookmarks' do
     visit('/bookmarks')
-    expect(page).to have_content 'makers.tech'
-    expect(page).to have_content 'google.com'
-    expect(page).to have_content 'youtube.com'
+    expect(page).to have_content 'www.makers.tech'
+    expect(page).to have_content 'www.google.com'
+    expect(page).to have_content 'www.youtube.com'
   end
 end
