@@ -8,8 +8,8 @@ end
 feature 'Viewing bookmarks' do
   scenario 'shows a list of bookmarks' do
     visit('/bookmarks')
-    expect(page).to have_content 'www.makers.tech'
-    expect(page).to have_content 'www.google.com'
-    expect(page).to have_content 'www.youtube.com'
+    expect(page).to have_content 'http://www.makers.tech'
+    expect(page).to have_content 'http://www.google.com'
+    expect(page).to have_content 'http://www.destroyallsoftware.com'
   end
 end

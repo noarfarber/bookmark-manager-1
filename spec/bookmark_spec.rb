@@ -4,7 +4,8 @@ describe Bookmark do
   
   describe "#can show an array of bookmarks" do
     it "can show an array of hardcoded bookmarks" do
-      expect(Bookmark.all).to include "www.makers.tech"
+      bookmarks = Bookmark.all
+      expect(bookmarks).to include "http://www.makers.tech"
     end
   end
 
