@@ -2,10 +2,17 @@ require 'bookmark'
 
 describe Bookmark do
   
-  describe "#can show an array of bookmarks" do
-    it "can show an array of hardcoded bookmarks" do
+  describe ".all" do
+    it "can show a list of bookmarks" do
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+
+      connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.makers.tech');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.youtube.com');")
+
       bookmarks = Bookmark.all
+
       expect(bookmarks).to include "http://www.makers.tech"
+      expect(bookmarks).to include "http://www.youtube.com"
     end
   end
 
