@@ -5,9 +5,9 @@ class Bookmark
 
   def self.all
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'bookmark_manager_test')
+      connection = PG.connect(dbname: 'bookmark_manager_test', user: 'postgres', password: 'postgres')
     else
-      connection = PG.connect(dbname: 'bookmark_manager')
+      connection = PG.connect(dbname: 'bookmark_manager', user: 'postgres', password: 'postgres')
     end
 
     bookmarks = connection.exec("SELECT * FROM bookmarks;")

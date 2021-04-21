@@ -22,3 +22,9 @@ Specification:
    As a time-pressed user
    So that I can save a website
    I would like to add the site's address and title to bookmark manager
+
+Column A | Column B | 
+---------|----------|---------
+ A1 | B1 | C1
+ A2 | B2 | C2
+ A3 | B3 | C3

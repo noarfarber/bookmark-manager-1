@@ -44,6 +44,14 @@ As a web user
 So that I can access websites I regularly visit
 I'd like to see list of saved bookmarks
 ```
+### User Story 2
+```
+Add new bookmarks
+
+As a time-pressed user
+So that I can save a website
+I would like to add the site's address and title to bookmark manager
+```
 
 #### Domain Model
 
@@ -51,37 +59,40 @@ I'd like to see list of saved bookmarks
 | Nouns   | Verbs     |
 |---------|-----------|
 |Bookmarks| Show list |
-|List     |           |
-
+|List     | add to list      |
+|url      | 
+|title    |
 
 | Nouns   | Property/ Owner|
 |---------|-----------     |
 |Bookmarks| Owner          |
 |List     | Owner          |
-
+|url      | property       |
+|title    | property       | 
 
 | Actions  | Owned by?  |
 |--------- |----------- |
 |print_list| List       |
-
+|add_to_list| List      |
 
 
 | Actions  |Property it reads or changes |
 |--------- |-----------                  |
-|print_list| @bookmark_list              |
+|print_list| @bookmark_manager - reads      |
+|add_to_list| @bookmark_manager - changes  |
 
-
-|Class     | Bookmark    |
+|Class     | Bookmark  |
 |--------- | ----------- |
 |Properties| @url, @title|
 |Actions   | initialize  |
 
 
 
-Class     | List| 
----------|----------|
- Properties |  @bookmark_list | 
- Actions | print_list | 
+|Class     | BookmarkManager | 
+|---------|----------|
+| Properties |  @bookmark_list | 
+| Actions | print_list | 
+| Actions | add_to_list |
 
 
 #### Diagram planning: 
