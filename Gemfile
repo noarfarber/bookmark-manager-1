@@ -11,6 +11,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
+  gem 'sinatra-contrib'
   gem 'sinatra-reloader'
   gem 'webrick'
 end

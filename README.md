@@ -58,41 +58,36 @@ I would like to add the site's address and title to bookmark manager
 
 | Nouns   | Verbs     |
 |---------|-----------|
-|Bookmarks| Show list |
-|List     | add to list      |
+|Bookmarks| Show list, add to list |
 |url      | 
-|title    |
 
 | Nouns   | Property/ Owner|
 |---------|-----------     |
 |Bookmarks| Owner          |
-|List     | Owner          |
-|url      | property       |
-|title    | property       | 
+|url      | property of bookmarks     |
 
 | Actions  | Owned by?  |
 |--------- |----------- |
-|print_list| List       |
-|add_to_list| List      |
+|.all      | Bookmarks      |
+|create  | Bookmarks     |
 
 
 | Actions  |Property it reads or changes |
 |--------- |-----------                  |
-|print_list| @bookmark_manager - reads      |
-|add_to_list| @bookmark_manager - changes  |
+|all       | @bookmark_manager - reads      |
+|add_bookmark | @bookmark_manager - changes  |
 
 |Class     | Bookmark  |
 |--------- | ----------- |
-|Properties| @url, @title|
-|Actions   | initialize  |
-
+|Properties| @bookmarks |
+|Actions   | all  |
 
 
 |Class     | BookmarkManager | 
 |---------|----------|
-| Properties |  @bookmark_list | 
-| Actions | print_list | 
-| Actions | add_to_list |
+| Properties |  @bookmarks | 
+| Actions | all, create | 
+
 
 
 #### Diagram planning: 
