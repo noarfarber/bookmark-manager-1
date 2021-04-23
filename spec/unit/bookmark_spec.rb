@@ -5,7 +5,7 @@ describe Bookmark do
   
   describe ".all" do
     it "can show a list of bookmarks" do
-      connection = PG.connect(dbname: 'bookmark_manager_test', user: 'postgres', password: 'postgres')
+      PG.connect(dbname: 'bookmark_manager_test', user: 'postgres', password: 'postgres')
 
       bookmark = Bookmark.create(url: "http://www.makers.tech", title: "Makers Academy")
       Bookmark.create(url: "http://www.youtube.com", title: "Youtube")
@@ -26,7 +26,6 @@ describe Bookmark do
       bookmark = Bookmark.create(url: "http://www.google.co.uk", title: "Google")
       persisted_data = persisted_data(id: bookmark.id)
       
-      
       expect(bookmark).to be_a Bookmark
       expect(bookmark.id).to eq persisted_data['id']
       expect(bookmark.title).to eq 'Google'
@@ -34,4 +33,12 @@ describe Bookmark do
     end
   end
 
+  describe ".delete" do 
+    it "can delete a bookmark" do
+      bookmark = Bookmark.create(url: "http://www.google.co.uk", title: "Google")
+      Bookmark.delete(id: bookmark.id)
+
+      expect(Bookmark.all.length).to eq 0
+    end
+  end
 end

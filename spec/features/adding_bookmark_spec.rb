@@ -1,5 +1,5 @@
-feature 'submitting a new bookmark' do
-  scenario 'add a bookmark' do
+feature 'Adding a new bookmark' do
+  scenario 'user can add a bookmark to the list' do
     visit '/bookmarks/new'
     fill_in('url', with: 'http://www.google.co.uk')
     fill_in('title', with: 'Google')

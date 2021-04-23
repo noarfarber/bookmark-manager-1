@@ -1,24 +1,47 @@
-As a <Stakeholder>,
-So that <Motivation>,
-I'd like <Task>.
+   ## User Stories
 
-Specification:
+### User Story 1
+```
+As a web user 
+So that I can access websites I regularly visit
+I'd like to see list of saved bookmarks
+```
 
-1. Show a list of bookmarks
-2. Add new bookmarks
-3. Delete bookmarks
-4. Update bookmarks
-5. Comment on bookmarks
-6. Tag bookmarks into categories
-7. Filter bookmarks by tag
-8. Users are restricted to manage only their own bookmarks
+#### Domain Model
 
-1. Show a list of bookmarks
-   As a web user
-   So that I can access websites I regularly visit
-   I'd like to see list of saved bookmarks
+| Nouns         | Verbs     |
+|---------------|-----------|
+|Bookmarks list | show list |
 
-2. Add new bookmarks
-   As a time-pressed user
-   So that I can save a website
-   I would like to add the site's address and title to bookmark manager
+  ![user_story_1.png](./public/images/user_story_1.png)
+
+### User Story 2
+```
+Add new bookmarks
+
+As a time-pressed user
+So that I can save a website
+I would like to add the site's address and title to bookmark manager
+```
+| Nouns         | Verbs          |
+|---------------|----------------|
+|Bookmark- url  | add a bookmark |
+
+### User Story 3
+```
+As a web user 
+So that I can maintain my list of bookmarks
+I'd like to delete a bookmark
+```
+
+#### Domain Model
+
+
+| Nouns   | Verbs     |
+|---------|-----------|
+|Bookmark | delete    |
+
+|Class     | Bookmarks       |
+|--------- | --------------- |
+|Methods   | all, create, delete  |
+  

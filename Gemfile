@@ -1,7 +1,12 @@
 source "https://rubygems.org"
 
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
 gem 'pg'
+gem 'puma'
+gem 'rack'
 gem 'sinatra'
+gem 'sinatra-contrib'
 
 group :test do
   gem 'capybara'
@@ -11,7 +16,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
-  gem 'sinatra-contrib'
   gem 'sinatra-reloader'
   gem 'webrick'
 end
